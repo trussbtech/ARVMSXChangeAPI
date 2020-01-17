@@ -1,0 +1,9 @@
+C:\arvmsAPI_project\ARVMSXChangeAPI\bin\ARVMSXChangeAPI.exe.config
+C:\arvmsAPI_project\ARVMSXChangeAPI\bin\ARVMSXChangeAPI.exe
+C:\arvmsAPI_project\ARVMSXChangeAPI\bin\ARVMSXChangeAPI.pdb
+C:\arvmsAPI_project\ARVMSXChangeAPI\bin\ARVMSXChangeAPI.xml
+C:\arvmsAPI_project\ARVMSXChangeAPI\obj\Debug\ARVMSXChangeAPI.vbproj.CoreCompileInputs.cache
+C:\arvmsAPI_project\ARVMSXChangeAPI\obj\Debug\ARVMSXChangeAPI.exe
+C:\arvmsAPI_project\ARVMSXChangeAPI\obj\Debug\ARVMSXChangeAPI.xml
+C:\arvmsAPI_project\ARVMSXChangeAPI\obj\Debug\ARVMSXChangeAPI.pdb
+C:\arvmsAPI_project\ARVMSXChangeAPI\obj\Debug\ARVMSXChangeAPI.vbprojAssemblyReference.cache

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/VMSXChange/VMSDataXChange" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/VMSXChange/VMSDataXChange" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/VMSXChange/VMSDataXChange">
+      <s:import namespace="http://www.w3.org/2001/XMLSchema" />
+      <s:element name="VMSSynchronization">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CompanyKey" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="LastSyncDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="SendAll" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VMSSynchronizationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VMSSynchronizationResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateLastSyncDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LastSyncDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateLastSyncDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateLastSyncDateResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="VMSSynchronizationSoapIn">
+    <wsdl:part name="parameters" element="tns:VMSSynchronization" />
+  </wsdl:message>
+  <wsdl:message name="VMSSynchronizationSoapOut">
+    <wsdl:part name="parameters" element="tns:VMSSynchronizationResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateLastSyncDateSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateLastSyncDate" />
+  </wsdl:message>
+  <wsdl:message name="UpdateLastSyncDateSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateLastSyncDateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="VMSDataXChangeSoap">
+    <wsdl:operation name="VMSSynchronization">
+      <wsdl:input message="tns:VMSSynchronizationSoapIn" />
+      <wsdl:output message="tns:VMSSynchronizationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLastSyncDate">
+      <wsdl:input message="tns:UpdateLastSyncDateSoapIn" />
+      <wsdl:output message="tns:UpdateLastSyncDateSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="VMSDataXChangeSoap" type="tns:VMSDataXChangeSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <wsdl:operation name="VMSSynchronization">
+      <soap:operation soapAction="http://tempuri.org/VMSXChange/VMSDataXChange/VMSSynchronization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLastSyncDate">
+      <soap:operation soapAction="http://tempuri.org/VMSXChange/VMSDataXChange/UpdateLastSyncDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="VMSDataXChange">
+    <wsdl:port name="VMSDataXChangeSoap" binding="tns:VMSDataXChangeSoap">
+      <soap:address location="http://localhost/VMSXChange/VMSDataXChange.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

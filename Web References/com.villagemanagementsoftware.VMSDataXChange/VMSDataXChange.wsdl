@@ -1,0 +1,2417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://VillageManagementSoftware.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://VillageManagementSoftware.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://VillageManagementSoftware.com/">
+      <s:element name="RequestServerUTC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RequestServerUTCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RequestServerUTCResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RequestServiceVersion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RequestServiceVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RequestServiceVersionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ARPostTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="XML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ARPostTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ARPostTransactionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="APAddVoucherUsingXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="XMLData" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="EmployeeID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="APAddVoucherUsingXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APAddVoucherUsingXMLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="APAddVoucherFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="XMLData" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="EmployeeID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="APAddVoucherFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APAddVoucherFileResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="APApproveVoucher">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPayID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="EmployeeID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="APApproveVoucherResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APApproveVoucherResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="APGetVouchers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPayID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="AssociationID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="BeginDueDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndDueDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="BeginCheckDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndCheckDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="OpenedOnly" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ParameterXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="APGetVouchersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APGetVouchersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="APMergeVouchers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="XMLData" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="EmployeeID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="APMergeVouchersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APMergeVouchersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="APPostPayment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPayID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CheckDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="CheckAmount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="CheckNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PaymentMethod" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="EmployeeID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="APPostPaymentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APPostPaymentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="APProcessVoucher">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPayID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="EmployeeID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ResidentContactID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="APProcessVoucherResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APProcessVoucherResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="APUnProcessVoucher">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPayID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="EmployeeID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ResidentContactID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="APUnProcessVoucherResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APUnProcessVoucherResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="APVoidPayment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPayPaymentID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="VoidDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EmployeeID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="APVoidPaymentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="APVoidPaymentResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CommerceOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CommerceRecordXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CommerceOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CommerceOrderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadCompliance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CompanyKey" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ResidentKey" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="ComplianceKey" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="IncludeClosed" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadComplianceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadComplianceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadComplianceDS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CompanyKey" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ResidentKey" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="ComplianceKey" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="IncludeClosed" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadComplianceDSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadComplianceDSResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PostComplianceFine">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ComplianceKey" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="FineAmount" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PostComplianceFineResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostComplianceFineResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCompliance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ComplianceRecordXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateComplianceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateComplianceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateComplianceSequence">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ComplianceSequenceRecordXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateComplianceSequenceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateComplianceSequenceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteInsurerContact">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="InsuranceContactKey" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteInsurerContactResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteInsurerContactResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadInsurer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="InformationBitMap" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="PeriodDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadInsurerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadInsurerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadInsurerDS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="InformationBitMap" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="PeriodDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadInsurerDSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadInsurerDSResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateInsurer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InsurerRecordXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateInsurerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateInsurerResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateInsurerContact">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="InsurerContactRecordXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateInsurerContactResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateInsurerContactResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBankAccountBalance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GLAccountID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBankAccountBalanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBankAccountBalanceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPropertyDocumentURL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CompanyDocumentKey" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPropertyDocumentURLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPropertyDocumentURLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DocumentDownload">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DocumentArea" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="DocumentID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ResidentContactID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DocumentDownloadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentDownloadResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DocumentsDownload">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DocumentArea" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="ParentID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ResidentContactID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentMask" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DocumentsDownloadResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DocumentsDownloadResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadPropertyDocuments">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CommitteeKeys" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadPropertyDocumentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadPropertyDocumentsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadProperty">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CompanyKey" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ResidentKey" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ResidentContactKey" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InformationBitMap" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="PeriodDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadPropertyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadPropertyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadProperties">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompanyKeys" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ResidentKey" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ResidentContactKey" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InformationBitMap" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="PeriodDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="XML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadPropertiesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadPropertiesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadPropertyBlockList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CompanyKeyDivisor" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="XML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadPropertyBlockListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadPropertyBlockListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadPropertyDS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CompanyKey" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ResidentKey" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ResidentContactKey" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="InformationBitMap" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="PeriodDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadPropertyDSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadPropertyDSResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateeDistributionNote">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NoteRecordXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateeDistributionNoteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateeDistributionNoteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadResidentNote">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ResidentKey" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="ResidentNoteKey" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="IncludeClosed" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadResidentNoteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadResidentNoteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadResidentNoteDS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ResidentKey" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="ResidentNoteKey" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="IncludeClosed" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadResidentNoteDSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadResidentNoteDSResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateResidentNote">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ResidentNoteRecordXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateResidentNoteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateResidentNoteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteResidentNote">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ResidentNoteKey" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteResidentNoteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteResidentNoteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadResidentContact">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ResidentKey" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="ResidentContactKey" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadResidentContactResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadResidentContactResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadResidentContactDS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ResidentKey" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="ResidentContactKey" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadResidentContactDSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadResidentContactDSResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateResidentContact">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ResidentContactRecordXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateResidentContactResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateResidentContactResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteResidentContact">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ResidentContactKey" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteResidentContactResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteResidentContactResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteResidentContactMethod">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ResidentContactMethodKey" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteResidentContactMethodResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteResidentContactMethodResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteVendorInsurancePolicy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="VendorInsuranceKey" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteVendorInsurancePolicyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteVendorInsurancePolicyResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteVendorInsurancePolicyDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="VendorInsurancePolicyKey" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteVendorInsurancePolicyDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteVendorInsurancePolicyDetailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadVendor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="InformationBitMap" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="PeriodDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadVendorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadVendorResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadVendorDS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="InformationBitMap" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="PeriodDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadVendorDSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadVendorDSResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadVendorByTaxIdentification">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="InformationBitMap" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="TaxIdentification" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DownloadVendorByTaxIdentificationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DownloadVendorByTaxIdentificationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateVendor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorRecordXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateVendorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateVendorResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateVendorContact">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorContactRecordXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateVendorContactResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateVendorContactResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateVendorInsurance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorInsuranceRecordXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateVendorInsuranceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateVendorInsuranceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateVendorLocation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorLocationRecordXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateVendorLocationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateVendorLocationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RequestServerUTCSoapIn">
+    <wsdl:part name="parameters" element="tns:RequestServerUTC" />
+  </wsdl:message>
+  <wsdl:message name="RequestServerUTCSoapOut">
+    <wsdl:part name="parameters" element="tns:RequestServerUTCResponse" />
+  </wsdl:message>
+  <wsdl:message name="RequestServiceVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:RequestServiceVersion" />
+  </wsdl:message>
+  <wsdl:message name="RequestServiceVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:RequestServiceVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ARPostTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:ARPostTransaction" />
+  </wsdl:message>
+  <wsdl:message name="ARPostTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:ARPostTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="APAddVoucherUsingXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:APAddVoucherUsingXML" />
+  </wsdl:message>
+  <wsdl:message name="APAddVoucherUsingXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:APAddVoucherUsingXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="APAddVoucherFileSoapIn">
+    <wsdl:part name="parameters" element="tns:APAddVoucherFile" />
+  </wsdl:message>
+  <wsdl:message name="APAddVoucherFileSoapOut">
+    <wsdl:part name="parameters" element="tns:APAddVoucherFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="APApproveVoucherSoapIn">
+    <wsdl:part name="parameters" element="tns:APApproveVoucher" />
+  </wsdl:message>
+  <wsdl:message name="APApproveVoucherSoapOut">
+    <wsdl:part name="parameters" element="tns:APApproveVoucherResponse" />
+  </wsdl:message>
+  <wsdl:message name="APGetVouchersSoapIn">
+    <wsdl:part name="parameters" element="tns:APGetVouchers" />
+  </wsdl:message>
+  <wsdl:message name="APGetVouchersSoapOut">
+    <wsdl:part name="parameters" element="tns:APGetVouchersResponse" />
+  </wsdl:message>
+  <wsdl:message name="APMergeVouchersSoapIn">
+    <wsdl:part name="parameters" element="tns:APMergeVouchers" />
+  </wsdl:message>
+  <wsdl:message name="APMergeVouchersSoapOut">
+    <wsdl:part name="parameters" element="tns:APMergeVouchersResponse" />
+  </wsdl:message>
+  <wsdl:message name="APPostPaymentSoapIn">
+    <wsdl:part name="parameters" element="tns:APPostPayment" />
+  </wsdl:message>
+  <wsdl:message name="APPostPaymentSoapOut">
+    <wsdl:part name="parameters" element="tns:APPostPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="APProcessVoucherSoapIn">
+    <wsdl:part name="parameters" element="tns:APProcessVoucher" />
+  </wsdl:message>
+  <wsdl:message name="APProcessVoucherSoapOut">
+    <wsdl:part name="parameters" element="tns:APProcessVoucherResponse" />
+  </wsdl:message>
+  <wsdl:message name="APUnProcessVoucherSoapIn">
+    <wsdl:part name="parameters" element="tns:APUnProcessVoucher" />
+  </wsdl:message>
+  <wsdl:message name="APUnProcessVoucherSoapOut">
+    <wsdl:part name="parameters" element="tns:APUnProcessVoucherResponse" />
+  </wsdl:message>
+  <wsdl:message name="APVoidPaymentSoapIn">
+    <wsdl:part name="parameters" element="tns:APVoidPayment" />
+  </wsdl:message>
+  <wsdl:message name="APVoidPaymentSoapOut">
+    <wsdl:part name="parameters" element="tns:APVoidPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommerceOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:CommerceOrder" />
+  </wsdl:message>
+  <wsdl:message name="CommerceOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:CommerceOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadComplianceSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadCompliance" />
+  </wsdl:message>
+  <wsdl:message name="DownloadComplianceSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadComplianceResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadComplianceDSSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadComplianceDS" />
+  </wsdl:message>
+  <wsdl:message name="DownloadComplianceDSSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadComplianceDSResponse" />
+  </wsdl:message>
+  <wsdl:message name="PostComplianceFineSoapIn">
+    <wsdl:part name="parameters" element="tns:PostComplianceFine" />
+  </wsdl:message>
+  <wsdl:message name="PostComplianceFineSoapOut">
+    <wsdl:part name="parameters" element="tns:PostComplianceFineResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateComplianceSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateCompliance" />
+  </wsdl:message>
+  <wsdl:message name="UpdateComplianceSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateComplianceResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateComplianceSequenceSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateComplianceSequence" />
+  </wsdl:message>
+  <wsdl:message name="UpdateComplianceSequenceSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateComplianceSequenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteInsurerContactSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteInsurerContact" />
+  </wsdl:message>
+  <wsdl:message name="DeleteInsurerContactSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteInsurerContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadInsurerSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadInsurer" />
+  </wsdl:message>
+  <wsdl:message name="DownloadInsurerSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadInsurerResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadInsurerDSSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadInsurerDS" />
+  </wsdl:message>
+  <wsdl:message name="DownloadInsurerDSSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadInsurerDSResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateInsurerSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateInsurer" />
+  </wsdl:message>
+  <wsdl:message name="UpdateInsurerSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateInsurerResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateInsurerContactSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateInsurerContact" />
+  </wsdl:message>
+  <wsdl:message name="UpdateInsurerContactSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateInsurerContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBankAccountBalanceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBankAccountBalance" />
+  </wsdl:message>
+  <wsdl:message name="GetBankAccountBalanceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBankAccountBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPropertyDocumentURLSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPropertyDocumentURL" />
+  </wsdl:message>
+  <wsdl:message name="GetPropertyDocumentURLSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPropertyDocumentURLResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocumentDownloadSoapIn">
+    <wsdl:part name="parameters" element="tns:DocumentDownload" />
+  </wsdl:message>
+  <wsdl:message name="DocumentDownloadSoapOut">
+    <wsdl:part name="parameters" element="tns:DocumentDownloadResponse" />
+  </wsdl:message>
+  <wsdl:message name="DocumentsDownloadSoapIn">
+    <wsdl:part name="parameters" element="tns:DocumentsDownload" />
+  </wsdl:message>
+  <wsdl:message name="DocumentsDownloadSoapOut">
+    <wsdl:part name="parameters" element="tns:DocumentsDownloadResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadPropertyDocumentsSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadPropertyDocuments" />
+  </wsdl:message>
+  <wsdl:message name="DownloadPropertyDocumentsSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadPropertyDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadPropertySoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadProperty" />
+  </wsdl:message>
+  <wsdl:message name="DownloadPropertySoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadPropertyResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadPropertiesSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadProperties" />
+  </wsdl:message>
+  <wsdl:message name="DownloadPropertiesSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadPropertiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadPropertyBlockListSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadPropertyBlockList" />
+  </wsdl:message>
+  <wsdl:message name="DownloadPropertyBlockListSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadPropertyBlockListResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadPropertyDSSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadPropertyDS" />
+  </wsdl:message>
+  <wsdl:message name="DownloadPropertyDSSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadPropertyDSResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateeDistributionNoteSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateeDistributionNote" />
+  </wsdl:message>
+  <wsdl:message name="UpdateeDistributionNoteSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateeDistributionNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadResidentNoteSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadResidentNote" />
+  </wsdl:message>
+  <wsdl:message name="DownloadResidentNoteSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadResidentNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadResidentNoteDSSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadResidentNoteDS" />
+  </wsdl:message>
+  <wsdl:message name="DownloadResidentNoteDSSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadResidentNoteDSResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateResidentNoteSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateResidentNote" />
+  </wsdl:message>
+  <wsdl:message name="UpdateResidentNoteSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateResidentNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteResidentNoteSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteResidentNote" />
+  </wsdl:message>
+  <wsdl:message name="DeleteResidentNoteSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteResidentNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadResidentContactSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadResidentContact" />
+  </wsdl:message>
+  <wsdl:message name="DownloadResidentContactSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadResidentContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadResidentContactDSSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadResidentContactDS" />
+  </wsdl:message>
+  <wsdl:message name="DownloadResidentContactDSSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadResidentContactDSResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateResidentContactSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateResidentContact" />
+  </wsdl:message>
+  <wsdl:message name="UpdateResidentContactSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateResidentContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteResidentContactSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteResidentContact" />
+  </wsdl:message>
+  <wsdl:message name="DeleteResidentContactSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteResidentContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteResidentContactMethodSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteResidentContactMethod" />
+  </wsdl:message>
+  <wsdl:message name="DeleteResidentContactMethodSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteResidentContactMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteVendorInsurancePolicySoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteVendorInsurancePolicy" />
+  </wsdl:message>
+  <wsdl:message name="DeleteVendorInsurancePolicySoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteVendorInsurancePolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteVendorInsurancePolicyDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteVendorInsurancePolicyDetail" />
+  </wsdl:message>
+  <wsdl:message name="DeleteVendorInsurancePolicyDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteVendorInsurancePolicyDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadVendorSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadVendor" />
+  </wsdl:message>
+  <wsdl:message name="DownloadVendorSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadVendorResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadVendorDSSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadVendorDS" />
+  </wsdl:message>
+  <wsdl:message name="DownloadVendorDSSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadVendorDSResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadVendorByTaxIdentificationSoapIn">
+    <wsdl:part name="parameters" element="tns:DownloadVendorByTaxIdentification" />
+  </wsdl:message>
+  <wsdl:message name="DownloadVendorByTaxIdentificationSoapOut">
+    <wsdl:part name="parameters" element="tns:DownloadVendorByTaxIdentificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateVendorSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateVendor" />
+  </wsdl:message>
+  <wsdl:message name="UpdateVendorSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateVendorResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateVendorContactSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateVendorContact" />
+  </wsdl:message>
+  <wsdl:message name="UpdateVendorContactSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateVendorContactResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateVendorInsuranceSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateVendorInsurance" />
+  </wsdl:message>
+  <wsdl:message name="UpdateVendorInsuranceSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateVendorInsuranceResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateVendorLocationSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateVendorLocation" />
+  </wsdl:message>
+  <wsdl:message name="UpdateVendorLocationSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateVendorLocationResponse" />
+  </wsdl:message>
+  <wsdl:portType name="VMSDataXChangeSoap">
+    <wsdl:operation name="RequestServerUTC">
+      <wsdl:input message="tns:RequestServerUTCSoapIn" />
+      <wsdl:output message="tns:RequestServerUTCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RequestServiceVersion">
+      <wsdl:input message="tns:RequestServiceVersionSoapIn" />
+      <wsdl:output message="tns:RequestServiceVersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ARPostTransaction">
+      <wsdl:input message="tns:ARPostTransactionSoapIn" />
+      <wsdl:output message="tns:ARPostTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="APAddVoucherUsingXML">
+      <wsdl:input message="tns:APAddVoucherUsingXMLSoapIn" />
+      <wsdl:output message="tns:APAddVoucherUsingXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="APAddVoucherFile">
+      <wsdl:input message="tns:APAddVoucherFileSoapIn" />
+      <wsdl:output message="tns:APAddVoucherFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="APApproveVoucher">
+      <wsdl:input message="tns:APApproveVoucherSoapIn" />
+      <wsdl:output message="tns:APApproveVoucherSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="APGetVouchers">
+      <wsdl:input message="tns:APGetVouchersSoapIn" />
+      <wsdl:output message="tns:APGetVouchersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="APMergeVouchers">
+      <wsdl:input message="tns:APMergeVouchersSoapIn" />
+      <wsdl:output message="tns:APMergeVouchersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="APPostPayment">
+      <wsdl:input message="tns:APPostPaymentSoapIn" />
+      <wsdl:output message="tns:APPostPaymentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="APProcessVoucher">
+      <wsdl:input message="tns:APProcessVoucherSoapIn" />
+      <wsdl:output message="tns:APProcessVoucherSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="APUnProcessVoucher">
+      <wsdl:input message="tns:APUnProcessVoucherSoapIn" />
+      <wsdl:output message="tns:APUnProcessVoucherSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="APVoidPayment">
+      <wsdl:input message="tns:APVoidPaymentSoapIn" />
+      <wsdl:output message="tns:APVoidPaymentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CommerceOrder">
+      <wsdl:input message="tns:CommerceOrderSoapIn" />
+      <wsdl:output message="tns:CommerceOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadCompliance">
+      <wsdl:input message="tns:DownloadComplianceSoapIn" />
+      <wsdl:output message="tns:DownloadComplianceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadComplianceDS">
+      <wsdl:input message="tns:DownloadComplianceDSSoapIn" />
+      <wsdl:output message="tns:DownloadComplianceDSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PostComplianceFine">
+      <wsdl:input message="tns:PostComplianceFineSoapIn" />
+      <wsdl:output message="tns:PostComplianceFineSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompliance">
+      <wsdl:input message="tns:UpdateComplianceSoapIn" />
+      <wsdl:output message="tns:UpdateComplianceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateComplianceSequence">
+      <wsdl:input message="tns:UpdateComplianceSequenceSoapIn" />
+      <wsdl:output message="tns:UpdateComplianceSequenceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInsurerContact">
+      <wsdl:input message="tns:DeleteInsurerContactSoapIn" />
+      <wsdl:output message="tns:DeleteInsurerContactSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadInsurer">
+      <wsdl:input message="tns:DownloadInsurerSoapIn" />
+      <wsdl:output message="tns:DownloadInsurerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadInsurerDS">
+      <wsdl:input message="tns:DownloadInsurerDSSoapIn" />
+      <wsdl:output message="tns:DownloadInsurerDSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInsurer">
+      <wsdl:input message="tns:UpdateInsurerSoapIn" />
+      <wsdl:output message="tns:UpdateInsurerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInsurerContact">
+      <wsdl:input message="tns:UpdateInsurerContactSoapIn" />
+      <wsdl:output message="tns:UpdateInsurerContactSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBankAccountBalance">
+      <wsdl:input message="tns:GetBankAccountBalanceSoapIn" />
+      <wsdl:output message="tns:GetBankAccountBalanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyDocumentURL">
+      <wsdl:input message="tns:GetPropertyDocumentURLSoapIn" />
+      <wsdl:output message="tns:GetPropertyDocumentURLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentDownload">
+      <wsdl:input message="tns:DocumentDownloadSoapIn" />
+      <wsdl:output message="tns:DocumentDownloadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DocumentsDownload">
+      <wsdl:input message="tns:DocumentsDownloadSoapIn" />
+      <wsdl:output message="tns:DocumentsDownloadSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadPropertyDocuments">
+      <wsdl:input message="tns:DownloadPropertyDocumentsSoapIn" />
+      <wsdl:output message="tns:DownloadPropertyDocumentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadProperty">
+      <wsdl:input message="tns:DownloadPropertySoapIn" />
+      <wsdl:output message="tns:DownloadPropertySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadProperties">
+      <wsdl:input message="tns:DownloadPropertiesSoapIn" />
+      <wsdl:output message="tns:DownloadPropertiesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadPropertyBlockList">
+      <wsdl:input message="tns:DownloadPropertyBlockListSoapIn" />
+      <wsdl:output message="tns:DownloadPropertyBlockListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadPropertyDS">
+      <wsdl:input message="tns:DownloadPropertyDSSoapIn" />
+      <wsdl:output message="tns:DownloadPropertyDSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateeDistributionNote">
+      <wsdl:input message="tns:UpdateeDistributionNoteSoapIn" />
+      <wsdl:output message="tns:UpdateeDistributionNoteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadResidentNote">
+      <wsdl:input message="tns:DownloadResidentNoteSoapIn" />
+      <wsdl:output message="tns:DownloadResidentNoteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadResidentNoteDS">
+      <wsdl:input message="tns:DownloadResidentNoteDSSoapIn" />
+      <wsdl:output message="tns:DownloadResidentNoteDSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResidentNote">
+      <wsdl:input message="tns:UpdateResidentNoteSoapIn" />
+      <wsdl:output message="tns:UpdateResidentNoteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResidentNote">
+      <wsdl:input message="tns:DeleteResidentNoteSoapIn" />
+      <wsdl:output message="tns:DeleteResidentNoteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadResidentContact">
+      <wsdl:input message="tns:DownloadResidentContactSoapIn" />
+      <wsdl:output message="tns:DownloadResidentContactSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadResidentContactDS">
+      <wsdl:input message="tns:DownloadResidentContactDSSoapIn" />
+      <wsdl:output message="tns:DownloadResidentContactDSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResidentContact">
+      <wsdl:input message="tns:UpdateResidentContactSoapIn" />
+      <wsdl:output message="tns:UpdateResidentContactSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResidentContact">
+      <wsdl:input message="tns:DeleteResidentContactSoapIn" />
+      <wsdl:output message="tns:DeleteResidentContactSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResidentContactMethod">
+      <wsdl:input message="tns:DeleteResidentContactMethodSoapIn" />
+      <wsdl:output message="tns:DeleteResidentContactMethodSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVendorInsurancePolicy">
+      <wsdl:input message="tns:DeleteVendorInsurancePolicySoapIn" />
+      <wsdl:output message="tns:DeleteVendorInsurancePolicySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVendorInsurancePolicyDetail">
+      <wsdl:input message="tns:DeleteVendorInsurancePolicyDetailSoapIn" />
+      <wsdl:output message="tns:DeleteVendorInsurancePolicyDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadVendor">
+      <wsdl:input message="tns:DownloadVendorSoapIn" />
+      <wsdl:output message="tns:DownloadVendorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadVendorDS">
+      <wsdl:input message="tns:DownloadVendorDSSoapIn" />
+      <wsdl:output message="tns:DownloadVendorDSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadVendorByTaxIdentification">
+      <wsdl:input message="tns:DownloadVendorByTaxIdentificationSoapIn" />
+      <wsdl:output message="tns:DownloadVendorByTaxIdentificationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVendor">
+      <wsdl:input message="tns:UpdateVendorSoapIn" />
+      <wsdl:output message="tns:UpdateVendorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVendorContact">
+      <wsdl:input message="tns:UpdateVendorContactSoapIn" />
+      <wsdl:output message="tns:UpdateVendorContactSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVendorInsurance">
+      <wsdl:input message="tns:UpdateVendorInsuranceSoapIn" />
+      <wsdl:output message="tns:UpdateVendorInsuranceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVendorLocation">
+      <wsdl:input message="tns:UpdateVendorLocationSoapIn" />
+      <wsdl:output message="tns:UpdateVendorLocationSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="VMSDataXChangeSoap" type="tns:VMSDataXChangeSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RequestServerUTC">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/RequestServerUTC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestServiceVersion">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/RequestServiceVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ARPostTransaction">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/ARPostTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="APAddVoucherUsingXML">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/APAddVoucherUsingXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="APAddVoucherFile">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/APAddVoucherFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="APApproveVoucher">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/APApproveVoucher" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="APGetVouchers">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/APGetVouchers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="APMergeVouchers">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/APMergeVouchers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="APPostPayment">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/APPostPayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="APProcessVoucher">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/APProcessVoucher" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="APUnProcessVoucher">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/APUnProcessVoucher" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="APVoidPayment">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/APVoidPayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommerceOrder">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/CommerceOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadCompliance">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/DownloadCompliance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadComplianceDS">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/DownloadComplianceDS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostComplianceFine">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/PostComplianceFine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompliance">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/UpdateCompliance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateComplianceSequence">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/UpdateComplianceSequence" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInsurerContact">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/DeleteInsurerContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadInsurer">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/DownloadInsurer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadInsurerDS">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/DownloadInsurerDS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInsurer">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/UpdateInsurer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInsurerContact">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/UpdateInsurerContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankAccountBalance">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/GetBankAccountBalance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyDocumentURL">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/GetPropertyDocumentURL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentDownload">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/DocumentDownload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentsDownload">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/DocumentsDownload" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadPropertyDocuments">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/DownloadPropertyDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadProperty">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/DownloadProperty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadProperties">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/DownloadProperties" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadPropertyBlockList">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/DownloadPropertyBlockList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadPropertyDS">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/DownloadPropertyDS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateeDistributionNote">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/UpdateeDistributionNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadResidentNote">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/DownloadResidentNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadResidentNoteDS">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/DownloadResidentNoteDS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResidentNote">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/UpdateResidentNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResidentNote">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/DeleteResidentNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadResidentContact">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/DownloadResidentContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadResidentContactDS">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/DownloadResidentContactDS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResidentContact">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/UpdateResidentContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResidentContact">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/DeleteResidentContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResidentContactMethod">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/DeleteResidentContactMethod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVendorInsurancePolicy">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/DeleteVendorInsurancePolicy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVendorInsurancePolicyDetail">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/DeleteVendorInsurancePolicyDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadVendor">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/DownloadVendor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadVendorDS">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/DownloadVendorDS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadVendorByTaxIdentification">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/DownloadVendorByTaxIdentification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVendor">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/UpdateVendor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVendorContact">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/UpdateVendorContact" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVendorInsurance">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/UpdateVendorInsurance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVendorLocation">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/UpdateVendorLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="VMSDataXChangeSoap12" type="tns:VMSDataXChangeSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RequestServerUTC">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/RequestServerUTC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RequestServiceVersion">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/RequestServiceVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ARPostTransaction">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/ARPostTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="APAddVoucherUsingXML">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/APAddVoucherUsingXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="APAddVoucherFile">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/APAddVoucherFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="APApproveVoucher">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/APApproveVoucher" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="APGetVouchers">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/APGetVouchers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="APMergeVouchers">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/APMergeVouchers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="APPostPayment">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/APPostPayment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="APProcessVoucher">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/APProcessVoucher" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="APUnProcessVoucher">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/APUnProcessVoucher" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="APVoidPayment">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/APVoidPayment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommerceOrder">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/CommerceOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadCompliance">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/DownloadCompliance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadComplianceDS">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/DownloadComplianceDS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostComplianceFine">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/PostComplianceFine" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCompliance">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/UpdateCompliance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateComplianceSequence">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/UpdateComplianceSequence" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInsurerContact">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/DeleteInsurerContact" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadInsurer">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/DownloadInsurer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadInsurerDS">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/DownloadInsurerDS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInsurer">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/UpdateInsurer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInsurerContact">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/UpdateInsurerContact" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankAccountBalance">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/GetBankAccountBalance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyDocumentURL">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/GetPropertyDocumentURL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentDownload">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/DocumentDownload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DocumentsDownload">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/DocumentsDownload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadPropertyDocuments">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/DownloadPropertyDocuments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadProperty">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/DownloadProperty" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadProperties">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/DownloadProperties" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadPropertyBlockList">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/DownloadPropertyBlockList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadPropertyDS">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/DownloadPropertyDS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateeDistributionNote">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/UpdateeDistributionNote" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadResidentNote">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/DownloadResidentNote" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadResidentNoteDS">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/DownloadResidentNoteDS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResidentNote">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/UpdateResidentNote" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResidentNote">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/DeleteResidentNote" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadResidentContact">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/DownloadResidentContact" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadResidentContactDS">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/DownloadResidentContactDS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateResidentContact">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/UpdateResidentContact" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResidentContact">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/DeleteResidentContact" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteResidentContactMethod">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/DeleteResidentContactMethod" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVendorInsurancePolicy">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/DeleteVendorInsurancePolicy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVendorInsurancePolicyDetail">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/DeleteVendorInsurancePolicyDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadVendor">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/DownloadVendor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadVendorDS">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/DownloadVendorDS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadVendorByTaxIdentification">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/DownloadVendorByTaxIdentification" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVendor">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/UpdateVendor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVendorContact">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/UpdateVendorContact" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVendorInsurance">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/UpdateVendorInsurance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateVendorLocation">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/UpdateVendorLocation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="VMSDataXChange">
+    <wsdl:port name="VMSDataXChangeSoap" binding="tns:VMSDataXChangeSoap">
+      <soap:address location="http://vmsxchange.tssvendor.com/VMSDataXChange.asmx" />
+    </wsdl:port>
+    <wsdl:port name="VMSDataXChangeSoap12" binding="tns:VMSDataXChangeSoap12">
+      <soap12:address location="http://vmsxchange.tssvendor.com/VMSDataXChange.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

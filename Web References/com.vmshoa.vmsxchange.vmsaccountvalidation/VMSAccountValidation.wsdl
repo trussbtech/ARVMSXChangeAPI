@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://VillageManagementSoftware.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://VillageManagementSoftware.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://VillageManagementSoftware.com/">
+      <s:element name="VMSAccountData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="AccountKey" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="AccountContactKey" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="AccountPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Provider" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="AccountInformationBitMap" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="PeriodDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VMSAccountDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VMSAccountDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VMSValidation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="AccountKey" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrivateKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Provider" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="AccountInformationBitMap" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VMSValidationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VMSValidationResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VMSSetAccountForeignPassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="AccountKey" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="AccountPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrivateKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Provider" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VMSSetAccountForeignPasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VMSSetAccountForeignPasswordResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VMSClearUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="AccountKey" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="PrivateKey" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Provider" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VMSClearUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VMSClearUserResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="VMSAccountDataSoapIn">
+    <wsdl:part name="parameters" element="tns:VMSAccountData" />
+  </wsdl:message>
+  <wsdl:message name="VMSAccountDataSoapOut">
+    <wsdl:part name="parameters" element="tns:VMSAccountDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="VMSValidationSoapIn">
+    <wsdl:part name="parameters" element="tns:VMSValidation" />
+  </wsdl:message>
+  <wsdl:message name="VMSValidationSoapOut">
+    <wsdl:part name="parameters" element="tns:VMSValidationResponse" />
+  </wsdl:message>
+  <wsdl:message name="VMSSetAccountForeignPasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:VMSSetAccountForeignPassword" />
+  </wsdl:message>
+  <wsdl:message name="VMSSetAccountForeignPasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:VMSSetAccountForeignPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="VMSClearUserSoapIn">
+    <wsdl:part name="parameters" element="tns:VMSClearUser" />
+  </wsdl:message>
+  <wsdl:message name="VMSClearUserSoapOut">
+    <wsdl:part name="parameters" element="tns:VMSClearUserResponse" />
+  </wsdl:message>
+  <wsdl:portType name="VMSAccountValidationSoap">
+    <wsdl:operation name="VMSAccountData">
+      <wsdl:input message="tns:VMSAccountDataSoapIn" />
+      <wsdl:output message="tns:VMSAccountDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VMSValidation">
+      <wsdl:input message="tns:VMSValidationSoapIn" />
+      <wsdl:output message="tns:VMSValidationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VMSSetAccountForeignPassword">
+      <wsdl:input message="tns:VMSSetAccountForeignPasswordSoapIn" />
+      <wsdl:output message="tns:VMSSetAccountForeignPasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VMSClearUser">
+      <wsdl:input message="tns:VMSClearUserSoapIn" />
+      <wsdl:output message="tns:VMSClearUserSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="VMSAccountValidationSoap" type="tns:VMSAccountValidationSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="VMSAccountData">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/VMSAccountData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VMSValidation">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/VMSValidation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VMSSetAccountForeignPassword">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/VMSSetAccountForeignPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VMSClearUser">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/VMSClearUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="VMSAccountValidationSoap12" type="tns:VMSAccountValidationSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="VMSAccountData">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/VMSAccountData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VMSValidation">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/VMSValidation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VMSSetAccountForeignPassword">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/VMSSetAccountForeignPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VMSClearUser">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/VMSClearUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="VMSAccountValidation">
+    <wsdl:port name="VMSAccountValidationSoap" binding="tns:VMSAccountValidationSoap">
+      <soap:address location="http://vmsxchange.tssvendor.com/VMSAccountValidation.asmx" />
+    </wsdl:port>
+    <wsdl:port name="VMSAccountValidationSoap12" binding="tns:VMSAccountValidationSoap12">
+      <soap12:address location="http://vmsxchange.tssvendor.com/VMSAccountValidation.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "VMSXChangeClientv4", "VMSXChangeClientv4.exe", "{5BBDB9E7-EB7E-4030-A8CC-8E048A59CA7A}"
+	ProjectSection(DebuggerProjectSystem) = preProject
+		PortSupplier = 00000000-0000-0000-0000-000000000000
+		Executable = D:\Development\Projects\VB\Utility\VMSXChangeClientv4\bin\VMSXChangeClientv4.exe
+		RemoteMachine = TSSDEVELOPMENT
+		StartingDirectory = D:\Development\Projects\VB\Utility\VMSXChangeClientv4\bin
+		Environment = Default
+		LaunchingEngine = 00000000-0000-0000-0000-000000000000
+		LaunchSQLEngine = No
+		AttachLaunchAction = No
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5BBDB9E7-EB7E-4030-A8CC-8E048A59CA7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

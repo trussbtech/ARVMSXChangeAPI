@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://vmsxchange.tssvendor.com/DocumentRequest.asmx?wsdl" docRef="http://vmsxchange.tssvendor.com/DocumentRequest.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://vmsxchange.tssvendor.com/DocumentRequest.asmx" xmlns:q1="http://VillageManagementSoftware.com/" binding="q1:DocumentRequestSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://vmsxchange.tssvendor.com/DocumentRequest.asmx" xmlns:q2="http://VillageManagementSoftware.com/" binding="q2:DocumentRequestSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

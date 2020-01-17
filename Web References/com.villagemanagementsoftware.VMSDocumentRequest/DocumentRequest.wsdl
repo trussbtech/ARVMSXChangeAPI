@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://VillageManagementSoftware.com/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://VillageManagementSoftware.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://VillageManagementSoftware.com/">
+      <s:element name="CertificateRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TaxID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CertificateRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CertificateRequestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CertificateRequestV2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TaxID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CertificateRequestV2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CertificateRequestV2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DemandRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TaxID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AccountID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StreetNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StreetName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Door" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Region" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PostalCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Lot" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Block" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Section" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DemandRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DemandRequestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DemandRequestV2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TaxID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AccountID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StreetNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StreetName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Door" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Region" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PostalCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Lot" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Block" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Section" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DemandRequestV2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DemandRequestV2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ManagedListRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ManagedListRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ManagedListRequestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PropertyRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TaxID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StreetName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Door" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PostalCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StreetNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PropertyRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PropertyRequestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResaleOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PartnerKey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="VendorPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ResaleRecordXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResaleOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ResaleOrderResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CertificateRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:CertificateRequest" />
+  </wsdl:message>
+  <wsdl:message name="CertificateRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:CertificateRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="CertificateRequestV2SoapIn">
+    <wsdl:part name="parameters" element="tns:CertificateRequestV2" />
+  </wsdl:message>
+  <wsdl:message name="CertificateRequestV2SoapOut">
+    <wsdl:part name="parameters" element="tns:CertificateRequestV2Response" />
+  </wsdl:message>
+  <wsdl:message name="DemandRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:DemandRequest" />
+  </wsdl:message>
+  <wsdl:message name="DemandRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:DemandRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="DemandRequestV2SoapIn">
+    <wsdl:part name="parameters" element="tns:DemandRequestV2" />
+  </wsdl:message>
+  <wsdl:message name="DemandRequestV2SoapOut">
+    <wsdl:part name="parameters" element="tns:DemandRequestV2Response" />
+  </wsdl:message>
+  <wsdl:message name="ManagedListRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:ManagedListRequest" />
+  </wsdl:message>
+  <wsdl:message name="ManagedListRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:ManagedListRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="PropertyRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:PropertyRequest" />
+  </wsdl:message>
+  <wsdl:message name="PropertyRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:PropertyRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ResaleOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:ResaleOrder" />
+  </wsdl:message>
+  <wsdl:message name="ResaleOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:ResaleOrderResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DocumentRequestSoap">
+    <wsdl:operation name="CertificateRequest">
+      <wsdl:input message="tns:CertificateRequestSoapIn" />
+      <wsdl:output message="tns:CertificateRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CertificateRequestV2">
+      <wsdl:input message="tns:CertificateRequestV2SoapIn" />
+      <wsdl:output message="tns:CertificateRequestV2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DemandRequest">
+      <wsdl:input message="tns:DemandRequestSoapIn" />
+      <wsdl:output message="tns:DemandRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DemandRequestV2">
+      <wsdl:input message="tns:DemandRequestV2SoapIn" />
+      <wsdl:output message="tns:DemandRequestV2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ManagedListRequest">
+      <wsdl:input message="tns:ManagedListRequestSoapIn" />
+      <wsdl:output message="tns:ManagedListRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PropertyRequest">
+      <wsdl:input message="tns:PropertyRequestSoapIn" />
+      <wsdl:output message="tns:PropertyRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ResaleOrder">
+      <wsdl:input message="tns:ResaleOrderSoapIn" />
+      <wsdl:output message="tns:ResaleOrderSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DocumentRequestSoap" type="tns:DocumentRequestSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CertificateRequest">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/CertificateRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CertificateRequestV2">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/CertificateRequestV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DemandRequest">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/DemandRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DemandRequestV2">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/DemandRequestV2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ManagedListRequest">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/ManagedListRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PropertyRequest">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/PropertyRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResaleOrder">
+      <soap:operation soapAction="http://VillageManagementSoftware.com/ResaleOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DocumentRequestSoap12" type="tns:DocumentRequestSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CertificateRequest">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/CertificateRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CertificateRequestV2">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/CertificateRequestV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DemandRequest">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/DemandRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DemandRequestV2">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/DemandRequestV2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ManagedListRequest">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/ManagedListRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PropertyRequest">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/PropertyRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResaleOrder">
+      <soap12:operation soapAction="http://VillageManagementSoftware.com/ResaleOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DocumentRequest">
+    <wsdl:port name="DocumentRequestSoap" binding="tns:DocumentRequestSoap">
+      <soap:address location="http://vmsxchange.tssvendor.com/DocumentRequest.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DocumentRequestSoap12" binding="tns:DocumentRequestSoap12">
+      <soap12:address location="http://vmsxchange.tssvendor.com/DocumentRequest.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
