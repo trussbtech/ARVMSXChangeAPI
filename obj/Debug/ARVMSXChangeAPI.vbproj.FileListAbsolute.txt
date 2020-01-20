@@ -7,3 +7,12 @@ C:\arvmsAPI_project\ARVMSXChangeAPI\obj\Debug\ARVMSXChangeAPI.exe
 C:\arvmsAPI_project\ARVMSXChangeAPI\obj\Debug\ARVMSXChangeAPI.xml
 C:\arvmsAPI_project\ARVMSXChangeAPI\obj\Debug\ARVMSXChangeAPI.pdb
 C:\arvmsAPI_project\ARVMSXChangeAPI\obj\Debug\ARVMSXChangeAPI.vbprojAssemblyReference.cache
+C:\repo\ARVMSXChangeAPI\bin\ARVMSXChangeAPI.exe.config
+C:\repo\ARVMSXChangeAPI\bin\ARVMSXChangeAPI.exe
+C:\repo\ARVMSXChangeAPI\bin\ARVMSXChangeAPI.pdb
+C:\repo\ARVMSXChangeAPI\bin\ARVMSXChangeAPI.xml
+C:\repo\ARVMSXChangeAPI\obj\Debug\ARVMSXChangeAPI.vbprojAssemblyReference.cache
+C:\repo\ARVMSXChangeAPI\obj\Debug\ARVMSXChangeAPI.vbproj.CoreCompileInputs.cache
+C:\repo\ARVMSXChangeAPI\obj\Debug\ARVMSXChangeAPI.exe
+C:\repo\ARVMSXChangeAPI\obj\Debug\ARVMSXChangeAPI.xml
+C:\repo\ARVMSXChangeAPI\obj\Debug\ARVMSXChangeAPI.pdb

@@ -10,13 +10,13 @@ Module modARVMSXChange
         Try
 
 
-            Dim iInformationBit As Long = 256
+            Dim iInformationBit As Long = 33077
 
             Dim PartnerKey As String = "1"
             Dim PropertyCompanyKey As String = ""
             Dim VendorID As String = "assnready"
             Dim VendorPassword As String = "r34dee4me"
-            Dim PropertyResident As String = "65"
+            Dim PropertyResident As String = ""
             Dim PropertyResidentContactKey As String = ""
             Dim dtpTransactionAsOf As Date = "01/01/1950"
             Dim ReturnData As String

@@ -65,19 +65,6 @@ Public Class ARVMSXChangeAPI
     End Function
 
 
-
-
-
-    Public Function AddXMLTag(ByVal name As String, ByVal Value As String, Optional ByVal maxLength As Integer = 0, Optional ByVal whiteSpaceVal As String = "") As String
-        Static badAmpersand As New System.Text.RegularExpressions.Regex("&(?![a-zA-Z]{2,6};|#[0-9]{2,4};)")
-        If Value = "" Then Value = whiteSpaceVal
-        If maxLength > 0 And Value.Length > maxLength Then Value = Value.Substring(0, maxLength)
-        Value = badAmpersand.Replace(Value, "&amp;")
-        Value = Value.Replace("<", "&lt;").Replace("""", "&quot;").Replace(">", "gt;")
-        Return "<" & name & ">" & Value & "</" & name & ">"
-    End Function
-
-
 End Class
 
 
