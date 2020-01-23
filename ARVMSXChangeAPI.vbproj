@@ -21,7 +21,7 @@
     <OptionExplicit>On</OptionExplicit>
     <OptionStrict>Off</OptionStrict>
     <RootNamespace>ARVMSXChangeAPI</RootNamespace>
-    <StartupObject>ARVMSXChangeAPI.modARVMSXChange</StartupObject>
+    <StartupObject>ARVMSXChangeAPI.TestConnectDB</StartupObject>
     <WebReference_EnableProperties>true</WebReference_EnableProperties>
     <WebReference_EnableSQLTypes>false</WebReference_EnableSQLTypes>
     <WebReference_EnableLegacyEventingModel>true</WebReference_EnableLegacyEventingModel>
@@ -123,6 +123,7 @@
     <Compile Include="AssemblyInfo.vb">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Classes\AccessARDATA.vb" />
     <Compile Include="Classes\ARVMSXChangeAPI.vb" />
     <Compile Include="modARVMSXChange.vb" />
     <Compile Include="My Project\Settings.Designer.vb">
@@ -130,6 +131,8 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="NewModARVMSXChange.vb" />
+    <Compile Include="TestConnectDB.vb" />
     <Compile Include="Web References\com.villagemanagementsoftware.VMSCollectionXChange\Reference.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
