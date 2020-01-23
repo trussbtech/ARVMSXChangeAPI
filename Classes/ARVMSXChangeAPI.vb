@@ -23,7 +23,7 @@ Public Class ARVMSXChangeAPI
 
         Try
 
-            Dim sFile As String = System.IO.Path.GetTempPath & "VMS"
+            Dim sFile As String = "C:\VMS\XML"
             If Not IO.Directory.Exists(sFile) Then IO.Directory.CreateDirectory(sFile)
             System.Threading.Thread.Sleep(700)
             sFile &= "\temp" & Now.Ticks / System.TimeSpan.TicksPerMillisecond & ".xml"
